@@ -35,10 +35,9 @@
             <i class="fa fa-play-circle" aria-hidden="true"></i>
           </span>
           {{ $t("page.video.play") }} /
-          <span class="icon">
-            <i class="fa fa-download" aria-hidden="true"></i>
-          </span>
-          {{ $t("page.video.download") }}
+          <a @click="download" style="color:inherit;">
+            <span class="icon"><i class="fa fa-download" aria-hidden="true"></i></span>{{ $t("page.video.download") }}
+          </a>
         </p>
       </header>
       <div class="card-content">
@@ -140,6 +139,9 @@ export default {
         var Flv = res.default;
         Flv(options);
       });
+    },
+    download() {
+      window.location.href = this.videoUrl;
     },
     copy() {
       this.$copyText(this.videoUrl);

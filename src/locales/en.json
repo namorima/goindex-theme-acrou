@@ -8,8 +8,8 @@
   },
   "copy": {
     "text": "Copy",
-    "success": "Copy successful",
-    "error": "Copy failed"
+    "success": "Copied Successfully",
+    "error": "Failed to copy"
   },
   "list": {
     "view": {
